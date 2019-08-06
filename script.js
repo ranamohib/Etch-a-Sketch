@@ -57,7 +57,11 @@ function clearCanvas(){
     });
 }
 function resize(){
+
     let gridSize = prompt("Please enter the number for grid boxes:")
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
     let boxWidth = 500/gridSize+"px";
     let boxHeight = 500/gridSize+"px";
     for(let k=0;k<gridSize;k++){
